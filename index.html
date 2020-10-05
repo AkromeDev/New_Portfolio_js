@@ -47,5 +47,38 @@
                 },
             });
         </script>
+
+        <div id="giffy">
+            <button @click="toggleClass(); working = !working">Let's work</button>
+            <button @click="toggleClass(); sleeping = !sleeping">Let's sleep</button>
+
+            <p v-if="working">
+                <img src=images/gif5.gif>
+            </p>
+              <p v-else-if="sleeping">
+                <img src=images/gif7.gif>
+              </p>
+        </div>
+
+        <script>
+            new Vue ({
+                el: "#giffy",
+
+                data: {
+                    working: false,
+                    sleeping: false
+                },
+
+                methods: {
+                    toggleClass() {
+                        if (working = true) {
+                            this.working = false
+                        } else if (sleeping = true) {
+                            this.sleeping = false
+                        }
+                    }
+                }
+            })
+        </script>
     </body>
 </html>
