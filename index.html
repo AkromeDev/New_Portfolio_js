@@ -14,15 +14,6 @@
             <p>Tell me, what is on your mind: {{ message }}</p>
         </div>
 
-        <script>
-            new Vue ({
-                el:'#app',
-                data: {
-                    message:'Hello World'
-                }
-            })
-        </script>
-
         <div id="taksList">
             <ul>
                 <li v-for='task in tasks' v-text='task'></li>
@@ -30,23 +21,6 @@
             <input id='input' type='text' v-model='newTask'>
             <button @click='addTask'>Add task</button>
         </div>
-
-        <script>
-            var appli = new Vue ({
-                el:'#taksList',
-                data: {
-                    newTask:'',
-                    tasks:['Do the Groceries', 'Water the plants', 'Enjoy the afternoon spray', 'Be double great at the morning']
-                },
-
-                methods: {
-                    addTask() {
-                        this.tasks.push(this.newTask);
-                        this.newTask='';
-                    }
-                },
-            });
-        </script>
 
         <div id="giffy">
             <button @click="toggleClass(); working = !working">Let's work</button>
@@ -60,25 +34,6 @@
               </p>
         </div>
 
-        <script>
-            new Vue ({
-                el: "#giffy",
-
-                data: {
-                    working: false,
-                    sleeping: false
-                },
-
-                methods: {
-                    toggleClass() {
-                        if (working = true) {
-                            this.working = false
-                        } else if (sleeping = true) {
-                            this.sleeping = false
-                        }
-                    }
-                }
-            })
-        </script>
+<script src='main.js'></script>
     </body>
 </html>
