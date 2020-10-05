@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <script src='https://unpkg.com/vue@2.4.4/dist/vue.js'></script>
+    </head>
+    <body>
+        <div>
+            <title class='page-title'> 
+                portfollio
+            </title>
+        </div>
+
+        <div id ='app'>
+            <input type='text' id='thoughts-input' v-model='message'>
+            <p>Tell me, what is on your mind: {{ message }}</p>
+        </div>
+
+        <script>
+            new Vue ({
+                el:'#app',
+                data: {
+                    message:'Hello World'
+                }
+            })
+        </script>
+
+        <div id="taksList">
+            <ul>
+                <li v-for='task in tasks' v-text='task'></li>
+            </ul>
+            <input id='input' type='text' v-model='newTask'>
+            <button @click='addTask'>Add task</button>
+        </div>
+
+        <script>
+            var appli = new Vue ({
+                el:'#taksList',
+                data: {
+                    newTask:'',
+                    tasks:['Do the Groceries', 'Water the plants', 'Enjoy the afternoon spray', 'Be double great at the morning']
+                },
+
+                methods: {
+                    addTask() {
+                        this.tasks.push(this.newTask);
+                        this.newTask='';
+                    }
+                },
+            });
+        </script>
+    </body>
+</html>
