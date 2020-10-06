@@ -2,15 +2,20 @@
     <head>
         <title>Joé Chatelain Backend-Dev</title>
         <script src='https://unpkg.com/vue@2.4.4/dist/vue.js'></script>
-        <link href="css/styles.css" type="text/css" rel="stylesheet">
+        <link href="css/mycss.css" type="text/css" rel="stylesheet">
         <meta name="description" content="A new Portfollio using Vue reactive properties and Bulma">
         <link href="images/Logo noir.svg" type="image/ai" rel="shortcut icon">
     </head>
+    
     <body>
+        <section class:= "hero is-fullheight">
+
+        </section>
+
         <div>
-            <title class='page-title'> 
+            <h1 class='page-title'> 
                 portfollio
-            </title>
+            </h1>
         </div>
 
         <div id ='app'>
@@ -19,7 +24,7 @@
         </div>
 
         <div id="taksList">
-            <ul>
+            <ul class="block-list is-small is-centered">
                 <li v-for='task in tasks' v-text='task'></li>
             </ul>
             <input id='input' type='text' v-model='newTask'>
