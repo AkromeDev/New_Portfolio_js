@@ -1,3 +1,8 @@
+
 .hero {
-    background: url(images/background.jpg) center / cover;
+background: url(images/background.jpg) center / cover;
 }
+
+@media (max-width: 1000px) { .hero { background: black url(images/background3.jpeg) center / cover; }}
+@media (max-width: 500px) { .hero { background: black url(images/background2.jpg) center / cover; }}
+
