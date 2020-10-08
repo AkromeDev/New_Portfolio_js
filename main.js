@@ -38,3 +38,24 @@ new Vue ({
         }
     }
 })
+
+Vue.component("modal", {
+    template: `
+    <div class="modal is-active">
+        <div class="modal-background"></div>
+            <div class="modal-content">
+                <div class="box">
+                    <p>fuckfuckfuck</p>
+                </div>
+            </div>
+        <button class="modal-close"></button>
+    </div>
+    `
+});
+
+new Vue({
+    el:"#modal",
+    data: {
+        showMessageModal: false
+    }
+})
