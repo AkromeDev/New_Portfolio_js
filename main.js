@@ -57,9 +57,10 @@ Vue.component("modal", {
 
 new Vue({
     el:"#modal",
+
     data: {
         showMessageModal: false
-    }
+    },
 })
 
 Vue.component('tabs', {
@@ -135,3 +136,56 @@ Vue.component('tab', {
 new Vue ({
     el:"#tabs-template"
 });
+
+
+Vue.component('bigmodal', {
+    template: 
+    `
+    <div class="modal is-active">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+
+            <header class="modal-card-head">
+                <p class="modal-card-title">
+                    <slot name="bigModalHeader">L'habit de fait pas le moine et le titre ne fait pas le livre</slot>
+                </p>
+                <button class="delete" aria-label="close" @click="$emit('close-big-modal')"></button>
+            </header>
+
+            <section class="modal-card-body">
+                <slot name="bigModalBody">
+                    This is the default body of the sections
+                </slot>
+            </section>
+
+            <footer class="modal-card-foot">
+                <button class="button is-success" @click="$emit('close-big-modal')">
+                    <slot name="bigModalButton1"> Make the magic happen </slot>
+                </button>
+
+                <button class="button" @click="$emit('close-big-modal')">
+                    <slot name="bigModalButton2">Cancel all magic</slot>
+                </button>
+            </footer>
+        </div>
+    </div>
+`,
+})
+
+new Vue ({
+    el:"#big-modal",
+
+    data: {
+        showBigModal: false
+    },
+});
+
+Vue.component ('counter-view', {
+    data() {
+        return {clickedTimes : 0 };
+    }
+});
+
+new Vue ({
+    el:"#clickcounter",
+})

@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Joé Chatelain Backend-Dev</title>
+        <title>Joe Chatelain Backend-Dev</title>
         <script src='https://unpkg.com/vue@2.4.4/dist/vue.js'></script>
         <link href="css/mycss.css" type="text/css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
@@ -47,8 +47,7 @@
 
         
         <div id="modal">
-            <button @click="showMessageModal = true">Show Modal</butt
-                on>
+            <button @click="showMessageModal = true">Show Modal</button>
 
             <modal v-show="showMessageModal" @close-modal="showMessageModal = false">Butterflies in the skies roaring like dragons trapped in my belly.
                 The beauty of the sight caught my soul off-guard, sending it to a world of chemical chaos one could only
@@ -72,13 +71,37 @@
                 </tab>
                 <tab name="The beginning">
                     <p>But everything has a beginning, and before we go on narrating the
-                        intrecate repercutions the wing of a butterfly can have. We shall 
+                        intrecate repercutions, the wing of a butterfly can have. We shall 
                         go back to the first month of the Galapian year.
                     </p>
                 </tab>
             </tabs>
         </div>
 
+        <div id="big-modal">
+            <button @click="showBigModal = true">Show me the love</button>
+
+            <bigmodal v-if="showBigModal" @close-big-modal="showBigModal = false">
+
+                <template slot="bigModalBody">And as he was wondering how only one country could exist 
+                    in this world of so many cultures. The fool on the hill was progressevely understanding
+                    the seemingly infinite number of disputes, oppositions and misunderstandings that had 
+                    to be solved in order for his eyes to sight this colorful landscape. A landscape that 
+                    almost feels natural now.
+                </template>
+
+            </bigmodal>
+        </div>
+
+        <div id="clickcounter" class="countainer">
+            <counter-view inline-template>
+                <div>
+                    <h1>How many times can you click on this button? {{ clickedTimes }} times</h1>
+
+                    <button @click="clickedTimes += 1">Go as fast as possible</button>
+                </div>
+            </counter-view>
+        </div>
     <script src='main.js'></script>
     </body>
 </html>
