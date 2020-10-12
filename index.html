@@ -47,12 +47,36 @@
 
         
         <div id="modal">
-            <button @click="showMessageModal = true">Show Modal</button>
+            <button @click="showMessageModal = true">Show Modal</butt
+                on>
 
             <modal v-show="showMessageModal" @close-modal="showMessageModal = false">Butterflies in the skies roaring like dragons trapped in my belly.
                 The beauty of the sight caught my soul off-guard, sending it to a world of chemical chaos one could only
                 describe as a tempestuous disarray of reality.
             </modal>
+        </div>
+
+        <div id="tabs-template" class="container">
+            <tabs>
+                <tab name="About me" :selected="true">
+                    <p>The fairy in the ocean was sure the end was night and though it was
+                        only her feeling that was bringing it to an end, the mere fact of
+                        her belief was the trigger for all the following events.
+                    </p>
+                </tab>
+                <tab name="The belief">
+                    <p>Nothing was less sure than the outcome. It would have been easier to
+                        win the annual lottery of the morgning star rather than following 
+                        this chain of micro-reactions. 
+                    </p>
+                </tab>
+                <tab name="The beginning">
+                    <p>But everything has a beginning, and before we go on narrating the
+                        intrecate repercutions the wing of a butterfly can have. We shall 
+                        go back to the first month of the Galapian year.
+                    </p>
+                </tab>
+            </tabs>
         </div>
 
     <script src='main.js'></script>
