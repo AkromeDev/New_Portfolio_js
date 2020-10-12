@@ -45,10 +45,12 @@ Vue.component("modal", {
         <div class="modal-background"></div>
             <div class="modal-content">
                 <div class="box">
-                    <p>fuckfuckfuck</p>
+                    <p>
+                        <slot></slot>
+                    </p>
                 </div>
             </div>
-        <button class="modal-close"></button>
+        <button class="modal-close" @click="$emit('close-modal')" ></button>
     </div>
     `
 });

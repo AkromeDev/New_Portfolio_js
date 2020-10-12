@@ -45,20 +45,15 @@
         </div>
 
 
-        <!-- <button @click="showMessageModal = true">Show Modal</button> -->
-        <!-- <div id="modal">
-            <modal></modal>
-        </div> -->
+        
+        <div id="modal">
+            <button @click="showMessageModal = true">Show Modal</button>
 
-        <!-- <div class="modal is-active">
-            <div class="modal-background"></div>
-            <div class="modal-content">
-                <div class="box">
-                    <p>fuckfuckfuck</p>
-                </div>
-            </div>
-            <button class="modal-close"></button>
-        </div> -->
+            <modal v-show="showMessageModal" @close-modal="showMessageModal = false">Butterflies in the skies roaring like dragons trapped in my belly.
+                The beauty of the sight caught my soul off-guard, sending it to a world of chemical chaos one could only
+                describe as a tempestuous disarray of reality.
+            </modal>
+        </div>
 
     <script src='main.js'></script>
     </body>
